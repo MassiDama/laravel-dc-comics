@@ -17,6 +17,8 @@
                 Description: {{ $comic -> description }}
                 <br>
                 Price: {{ $comic -> price }} €
+                <br>
+                <button><a href=" {{ route('comics.show', $comic -> id) }}">  VAI </a></button>
             </li>   
         @endforeach
     </ul>
