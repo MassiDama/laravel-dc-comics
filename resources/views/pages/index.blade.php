@@ -5,6 +5,10 @@
 @section('content')
     <h1>Comics: {{ count($comics) }}</h1>
 
+    <br>
+
+    <button><a href=" {{ route('comics.create')}} "> AGGIUNGI NUOVO COMIC</a></button>
+
     <ul>
         @foreach ($comics as $comic)
             <li>
@@ -22,4 +26,6 @@
             </li>   
         @endforeach
     </ul>
+
+    <br>
 @endsection
