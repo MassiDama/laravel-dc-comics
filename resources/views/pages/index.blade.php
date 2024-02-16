@@ -16,13 +16,13 @@
                 <br>
                 <button><a href=" {{ route('comics.show', $comic -> id) }}">  VAI </a></button>
                 <button><a href=" {{ route('comics.edit', $comic -> id) }}">  EDIT </a></button>
-                
+
                 <form action=" {{ route('comics.destroy', $comic -> id) }} " method="POST">
 
                     @csrf
                     @method('DELETE')
 
-                    <input type="submit" value="X">
+                    <input type="submit" value="X" id="delete-btn">
                 </form>
 
                 <br> <br> 
