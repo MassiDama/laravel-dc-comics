@@ -15,6 +15,8 @@
                 Title: {{ $comic -> title}}
                 <br>
                 <button><a href=" {{ route('comics.show', $comic -> id) }}">  VAI </a></button>
+                <button><a href=" {{ route('comics.edit', $comic -> id) }}">  EDIT </a></button>
+                
                 <form action=" {{ route('comics.destroy', $comic -> id) }} " method="POST">
 
                     @csrf
