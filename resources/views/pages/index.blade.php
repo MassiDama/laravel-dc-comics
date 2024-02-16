@@ -5,7 +5,7 @@
 @section('content')
     <h1>Comics: {{ count($comics) }}</h1>
 
-    <br>
+    <br> 
 
     <button><a href=" {{ route('comics.create')}} "> AGGIUNGI NUOVO COMIC</a></button>
 
@@ -14,18 +14,19 @@
             <li>
                 Title: {{ $comic -> title}}
                 <br>
-                Author: {{ $comic -> author }}
-                <br>
-                Genre: {{ $comic -> genre }}
-                <br>
-                Description: {{ $comic -> description }}
-                <br>
-                Price: {{ $comic -> price }} €
-                <br>
                 <button><a href=" {{ route('comics.show', $comic -> id) }}">  VAI </a></button>
+                <form action=" {{ route('comics.destroy', $comic -> id) }} " method="POST">
+
+                    @csrf
+                    @method('DELETE')
+
+                    <input type="submit" value="X">
+                </form>
+
+                <br> <br> 
             </li>   
         @endforeach
     </ul>
 
-    <br>
+   
 @endsection

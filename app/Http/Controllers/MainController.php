@@ -52,7 +52,7 @@ class MainController extends Controller
 
         return redirect() -> route('comics.show', $newComic -> id);
 
-    }
+    } 
 
     /**
      * Display the specified resource.
@@ -98,6 +98,10 @@ class MainController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic = Comic :: find($id);
+        $comic -> delete();
+
+        return redirect() -> route('comics.index');
+
     }
 }
