@@ -2,8 +2,9 @@ import './bootstrap';
 
 const deleteButtons = document.getElementById('delete-btn');
 
-window.addEventListener("click", mostraMessaggio);
+window.addEventListener("click", function () {
 
-function mostraMessaggio() {
     alert("Sicuro di voler eliminare il Comic?");
-}
+
+});
+
